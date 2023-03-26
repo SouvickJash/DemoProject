@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   {{>headerlink}}
+</head>
+<body>
+     <div class="container-fluid main_menu">
+        <div class="row">
+          <div class="col-md-10 col-12 mx-auto">
+           {{>navbar}}
+
+
+
+
+
+          </div>
+        </div>
+     </div>
+
+         <!--main Header-->
+  <table class="table">
+  <thead class="table-dark">
+          <tr>
+            <td>Image</td>
+            <td>FirstName</td>
+            <td>Lastname</td>
+            <td>Email</td>
+            <td>Action1</td>
+            <td>Action2</td>
+          </tr>
+  </thead>
+  <tbody>
+     {{#each joblist}}
+         <tr>
+            <td>
+            
+
+               <img src="{{image}}" alt="Profilepic" width="50" height="50"/>
+            
+            </td>
+            <td> {{fname}}</td>
+            <td> {{lname}}</td>
+            <td> {{email}}</td>
+            <td> <a href="/update/{{_id}}"> <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button></a></td>
+            <td> <a href="/delete/{{_id}}"> <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></a></td>
+          </tr>
+  
+        {{/each}}
+   
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+    <!-- Right -->
+  </div>
+</section>
+                 
+            
+
+            
+
+      <!--footer code-->
+        {{>footer}}
+
+
+      <!--footer end-->
+</body>
+</html>

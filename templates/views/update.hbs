@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   {{>headerlink}}
+</head>
+<body>
+     <div class="container-fluid main_menu">
+        <div class="row">
+          <div class="col-md-10 col-12 mx-auto">
+           {{>navbar}}
+
+
+
+
+
+          </div>
+        </div>
+     </div>
+
+         <!--main Header-->
+
+    
+                <div class="container">
+<div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">Update Userdetails</div>
+                            <div class="card-body">
+
+                                <form class="form-horizontal"  action="/update/{{joblist._id}}" method="POST">
+
+                                  
+
+                                    <div class="form-group">
+                                        <label for="name" class="cols-sm-2 control-label">First Name</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="fname" id="name" value="{{ joblist.fname }}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name" class="cols-sm-2 control-label">Last Name</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="lname" id="name"  value="{{ joblist.lname }}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="email" id="email" value="{{ joblist.email }}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">Phone No.</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="phone" id="name" value="{{ joblist.phoneno }}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name" class="cols-sm-2 control-label">Age</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="age" id="name" value="{{ joblist.age }}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="form-group ">
+                                        <input type="submit" name="submit" value="Update">
+                                    </div>
+   
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+</div>
+                 
+            
+
+            
+
+      <!--footer code-->
+        {{>footer}}
+
+
+      <!--footer end-->
+</body>
+</html>
